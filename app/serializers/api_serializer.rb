@@ -1,4 +1,4 @@
-require Rails.root.join "app/controllers/concerns/serializer_api.rb"
+require Rails.root.join "app/controllers/concerns/serializer_api"
 
 class ApiSerializer < ActiveModel::Serializer
 

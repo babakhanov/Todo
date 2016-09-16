@@ -3,8 +3,6 @@ class ApiController < ApplicationController
 
   load_and_authorize_resource except: [:create]
 
-  #skip_before_action :verify_authenticity_token if Rails.env == "development"
-
   include ::SerializerApi
   include ::ControllerApi
 

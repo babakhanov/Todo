@@ -2,7 +2,7 @@ module ::SerializerApi
   extend ActiveSupport::Concern
   def serialize_objects(objects, serializer, options = {})
     options = options.merge({ serializer: serializer })
-    ActiveModel::Serializer::ArraySerializer.new(objects, options)
+    ActiveModel::Serializer::CollectionSerializer.new(objects, options)
   end
 
   def serialize_object(object, serializer = nil, options= {})
