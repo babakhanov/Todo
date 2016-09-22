@@ -1,9 +1,5 @@
 module Api
   def self.resources
-    [
-       :products,
-       :sub_products,
-       :orders
-    ]
+    ActiveRecord::Base.connection.tables.map{|i| i.to_sym }
   end
 end
