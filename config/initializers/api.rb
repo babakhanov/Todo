@@ -5,4 +5,3 @@ Api.resources.each do |r|
     attributes r.to_s.camelize.singularize.constantize.column_names
   })
 end
-
