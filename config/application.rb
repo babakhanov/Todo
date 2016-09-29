@@ -8,5 +8,6 @@ module Todo
   class Application < Rails::Application
     env_filename = File.exist?(Rails.root.join(".env.#{Rails.env}")) ? ".env.#{Rails.env}" : ".env"
     Dotenv.load Rails.root.join(env_filename)
+    config.exceptions_app = self.routes
   end
 end

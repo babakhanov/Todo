@@ -9,7 +9,7 @@ module ControllerApi
     begin
       ("::Api::" + class_one + "Serializer").constantize
     rescue
-      ("::Api::" + class_one + "BaseSerializer").constantize
+      SharedSerializer
     end
   end
 
@@ -37,7 +37,7 @@ module ControllerApi
       begin
         res.send(scope)
       rescue ArgumentError
-        res.send(scope, Search.new(params[:search]))
+        res.send(scope, ::Search.new(params[:search]))
       end
     else
       res

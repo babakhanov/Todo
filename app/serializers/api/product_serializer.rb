@@ -6,6 +6,6 @@ class Api::ProductSerializer < ApiSerializer
   end
 
   def show
-    [:description]
+    []
   end
 end
